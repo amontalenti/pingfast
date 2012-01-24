@@ -1,0 +1,9 @@
+TODO
+
+- web server that implements the pingdom_custom_http interface for an arbitrary set of URLs
+ 
+- command that will create a "response time check" for an existing Pingdom uptime check -- this will duplicate the check but instead of pointing to the check URL, will point to a specified production server URL running the above custom service
+
+- some examples
+
+- deployment script for easy deployment to a Linux machine
