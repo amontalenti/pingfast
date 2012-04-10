@@ -31,6 +31,28 @@ allow you to "sync" your existing Pingdom account to a second "pingfast"
 account, which is to say, a second Pingdom account that is used exclusively for
 monitoring response times of your existing Pingdom checks.
 
+Configuration
+-------------
+
+There is an example configuration file in `examples/localsettings.py`. Copy
+this file to the root directory of the project and customize with your values.
+
+THRESHOLDS
+  a dictionary mapping Pingdom check_id's to response time thresholds (in milliseconds);
+  if none is specified, the default of 1000ms (1s) is assumed
+
+DEPLOY_HOST
+  a host that will be used for deploying the project via Fabric; this is the same 
+  host that will be used by the `pingdom_sync` management command
+
+PRIMARY_USERNAME, PRIMARY_PASSWORD, PRIMARY_APPKEY
+  Pingdom credentials and API App Key used for your "primary" Pingdom account
+
+SECONDARY_USERNAME, SECONDARY_PASSWORD, SECONDARY_APPKEY
+  Pingdom credentials and API App Key used for your "secondary" Pingdom account;
+  this is the account where the pingfast custom checks are created, and the target 
+  of the `pingdom_sync` management command
+
 Requirements
 ------------
 
@@ -44,6 +66,6 @@ as `pingdom.py` for convenience.
 Authors
 -------
 
-Emmett Butler (all coding & testing)
-Andrew Montalenti (concept & documentation)
+Emmett Butler (initial coding & testing)
+Andrew Montalenti (concept, documentation & refactoring)
 
