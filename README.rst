@@ -34,6 +34,6 @@ monitoring response times of your existing Pingdom checks.
 Authors
 -------
 
-Emmett Butler
-Andrew Montalenti
+Emmett Butler (all coding & testing)
+Andrew Montalenti (concept & documentation)
 
