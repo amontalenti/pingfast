@@ -1,4 +1,3 @@
-import parsely_keys
 import pingdom
 import settings
 
@@ -61,9 +60,9 @@ def sync_pingdom_accounts():
                 parameters={
                     'name': "%s [Response Time]" % (check,),
                     'type': 'httpcustom',
-                    'host': 'localhost',
+                    'host': settings.DEPLOY_SERVER,
                     'url': '/response/%s' % (details[check]['id'],),
-                    'port': '5000',
+                    'port': settings.DEPLOY_PORT,
                     'resolution': details[check]['resolution'],
                     'sendtoemail': details[check]['sendtoemail'],
                     'sendtosms': details[check]['sendtosms'],

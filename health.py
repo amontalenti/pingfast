@@ -1,4 +1,5 @@
 from flask import Flask, make_response
+import socket
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
 import pingdom
@@ -67,4 +68,5 @@ def valid_xml(et_elem):
     return resp
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    debug = socket.gethostname() == settings.DEPLOY_HOSTNAME
+    app.run(host="0.0.0.0", port=81, debug=debug)

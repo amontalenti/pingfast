@@ -41,9 +41,18 @@ THRESHOLDS
   a dictionary mapping Pingdom check_id's to response time thresholds (in milliseconds);
   if none is specified, the default of 1000ms (1s) is assumed
 
-DEPLOY_HOST
-  a host that will be used for deploying the project via Fabric; this is the same 
+DEPLOY_SERVER, DEPLOY_PORT
+  a server address that will be used for deploying the project via Fabric; this is the same 
   host that will be used by the `pingdom_sync` management command
+
+DEPLOY_HOSTNAME
+  local hostname of deployment server; used for enabling/disabling debug mode
+
+DEPLOY_USER
+  user account (accessible via SSH) used for remote deployment
+  
+DEPLOY_DIR
+  directory on DEPLOY_SERVER to use for storing the project files
 
 PRIMARY_USERNAME, PRIMARY_PASSWORD, PRIMARY_APPKEY
   Pingdom credentials and API App Key used for your "primary" Pingdom account
