@@ -13,5 +13,8 @@ SECONDARY_USERNAME = "your_pingdom_username"
 SECONDARY_PASSWORD = "*********************"
 SECONDARY_APPKEY = "12345XXXXXXXXXXXXX"
 
-DEPLOY_HOST = "pingdom.myhost.com"
-DEPLOY_USER = "pingdom"
+DEPLOY_SERVER = "pingfast.mydomain.com"
+DEPLOY_USER = "pingfast"
+DEPLOY_DIR = "/home/pingfast"
+DEPLOY_HOSTNAME = "pingfast"
+DEPLOY_PORT = 81
