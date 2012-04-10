@@ -75,6 +75,6 @@ as `pingdom.py` for convenience.
 Authors
 -------
 
-* Emmett Butler - initial coding & testing)
-* Andrew Montalenti - concept, documentation & refactoring)
+* Emmett Butler - initial coding & testing
+* Andrew Montalenti - concept, documentation & refactoring
 
