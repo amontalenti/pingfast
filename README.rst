@@ -31,6 +31,16 @@ allow you to "sync" your existing Pingdom account to a second "pingfast"
 account, which is to say, a second Pingdom account that is used exclusively for
 monitoring response times of your existing Pingdom checks.
 
+Requirements
+------------
+
+This project depends on `Flask`_ to implement the web service. It uses dcraig's
+`Python RESTful wrapper for the Pingdom API`_, as well, but embeds it here 
+as `pingdom.py` for convenience.
+
+.. _Flask: http://flask.pocoo.org/
+.. _Python RESTful wrapper for the Pingdom API: https://github.com/drcraig/python-restful-pingdom
+
 Authors
 -------
 

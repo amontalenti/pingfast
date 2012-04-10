@@ -1,22 +1,20 @@
 import parsely_keys
 import pingdom
-
+import settings
 
 def primary_account_login():
     return pingdom.Pingdom(
-        username=parsely_keys.primary_username,
-        password=parsely_keys.primary_password,
-        appkey=parsely_keys.primary_appkey
+        username=settings.PRIMARY_USERNAME,
+        password=settings.PRIMARY_PASSWORD,
+        appkey=settings.PRIMARY_APPKEY
     )
-
 
 def secondary_account_login():
     return pingdom.Pingdom(
-        username=parsely_keys.secondary_username,
-        password=parsely_keys.secondary_password,
-        appkey=parsely_keys.secondary_appkey
+        username=settings.SECONDARY_USERNAME,
+        password=settings.SECONDARY_PASSWORD,
+        appkey=settings.SECONDARY_APPKEY
     )
-
 
 def sync_pingdom_accounts():
     """synchronizes the two pingdom accounts by adding new checks to the 2nd
