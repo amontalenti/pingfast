@@ -44,8 +44,8 @@ def sync_pingdom_accounts():
         for check in secondary_checks['checks']
     }
 
-    for check in main_checks:
-        if check not in secondary_checks:
+    for check, check_id in main_checks.iteritems():
+        if check not in secondary_checks and str(check_id) not in settings.IGNORES:
             #get the details
             p = primary_account_login()
             details = p.method('checks/%s' % (main_checks[check],))
