@@ -41,6 +41,10 @@ THRESHOLDS
   a dictionary mapping Pingdom check_id's to response time thresholds (in milliseconds);
   if none is specified, the default of 1000ms (1s) is assumed
 
+IGNORES
+  a sequence of Pingdom check ids which should be "ignored" for the purposes of the ``pingdom_sync`` command
+  that is, they won't be copied over to the secondary account because they are not worth doing response time monitoring on
+
 DEPLOY_SERVER, DEPLOY_PORT
   a server address that will be used for deploying the project via Fabric; this is the same 
   host that will be used by the `pingdom_sync` management command
