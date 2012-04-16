@@ -15,6 +15,18 @@ def secondary_account_login():
         appkey=settings.SECONDARY_APPKEY
     )
 
+def _action_all(conn, action):
+    checks = conn.method('checks')
+    for check in checks['checks']:
+        print "%s '%s'" % (action, check['name'])
+        getattr(conn, action)(check['name']) 
+
+def pause_all(conn):
+    _action_all(conn, "pause_check")
+
+def unpause_all(conn):
+    _action_all(conn, "unpause_check")
+
 def sync_pingdom_accounts():
     """synchronizes the two pingdom accounts by adding new checks to the 2nd
     account"""
